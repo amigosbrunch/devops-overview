@@ -1,5 +1,63 @@
-initialzise git repo
-make a change
-staging the change
-commit the change
-add data
+- initialzise git repo  # git init (cd /path/to/repo)
+- make a change         # (make a file or add anything in it)
+- staging the change    # git add . (or git add index.html)
+- commit the change     # git commit -m "index page is added"
+- add data              # git add.  
+                        # git commit -m "index file modified"
+
+
+- remove changes in staging     # git add. 
+                                # git restore --staged hello.txt (removes hello from staging) 
+                                # git commit -m "only index mod is added"
+- look into project history     # git log (we can prettify the log by changing this command)
+- add more commits              # git diff d3f599b726b3d6c237c7e5bdf15c2375491bd466 
+                                  (shows the difference when the commit added)
+- remove a commit from project  # git reset --hard d3f599b726b3d6c237c7e5bdf15c2375491bd466
+
+
+- start github                  # (login to github)
+- connecting github to git              
+    (Check Git Installation)
+        # git --version  
+    
+    (Set Up Git (If Not Configured))
+        # git config --global user.name "YourGitHubUsername"  
+        # git config --global user.email "your-email@example.com"
+
+    (Press Enter to save it in the default location.)
+        # ssh-keygen -t rsa -b 4096 -C "your-email@example.com"
+
+    (Start SSH Agent and Add Key)
+        # eval $(ssh-agent -s)
+        # ssh-add ~/.ssh/id_rsa
+
+    (Copy the SSH Key to GitHub)
+        # cat ~/.ssh/id_rsa.pub 
+            [Copy the output and add it to GitHub → Settings → SSH and GPG keys → New SSH Key]
+
+    (Test Connection)
+        # ssh -T git@github.com
+
+    (Clone a Repository)
+        # git clone git@github.com:JohnDoe/MySampleRepo.git
+
+    (Add, Commit & Push Changes)
+        # cd MySampleRepo
+        # git add .
+        # git commit -m "Initial commit"
+        # git push origin main
+            
+- create new repo in github             # 
+- connect remote repo to local repo     
+    (push an existing repository from the command line)
+        # git remote add origin https://github.com/amigosbrunch/devops-overview.git 
+        # git remote -v 
+            (to check connection added)
+        # git push 
+            (for fist time: # git push --set-upstream origin master)
+
+- make a change commit and push it to remote repo            
+        # git add .
+            (after the change)
+        # git commit -m "new line added"
+        # git push
