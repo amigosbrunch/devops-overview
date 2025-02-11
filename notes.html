@@ -53,11 +53,33 @@
         # git commit -m "new line added"
         # git push
 
-
 - host a live page in github (if repo is public)
     - go to settings > branch: master | folder: root > save 
         (wait for sometime, link will appear the of the page)
 
 
-- add readme.md (ref: readme.so)
+
+
+- add README.md (ref: readme.so)
     - add a basic template to explain your repo
+
+- explore other version control apps (ex:- git lab)
+    - login https://gitlab.com/
+    - create a new project > create a blank project(ex:- devops-gitlab) > 
+    - set origin for local code here
+        # git remote add gl-origin git@gitlab.com:amigosbrunch/devops-gitlab.git
+            (as previously we have done - connecting github to git)
+        # git remote -v 
+            (to check connection added)
+        # git push 
+            (for fist time: # git push --set-upstream gl-origin master)
+    - add ssh key
+        # cat ~/.ssh/id_rsa.pub 
+            - Copy the output and add it to gitlab > profile > ssh key > paste it here > add key   
+                # ssh-keygen -t rsa -b 4096 -C "your-email@example.com"
+                # eval $(ssh-agent -s)
+                # ssh-add ~/.ssh/id_rsa
+                # cat ~/.ssh/id_rsa.pub 
+                    [run the above commands if not ran before]
+    - push code
+        # git push gl-origin master
