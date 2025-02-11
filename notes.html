@@ -58,8 +58,6 @@
         (wait for sometime, link will appear the of the page)
 
 
-
-
 - add README.md (ref: readme.so)
     - add a basic template to explain your repo
 
@@ -83,3 +81,42 @@
                     [run the above commands if not ran before]
     - push code
         # git push gl-origin master
+
+
+- git branches      
+    # git branch -a (response: greens are branhes accessed in local)
+
+- making a new branch and switching to it
+    # git branch -a 
+        (shows all branhes)
+    # git branch feat-1 
+        (clones the current head{updated log} of the master into it)
+    # git switch feat-1 
+        (switched to new branch)
+(or)
+    # git checkout -b feat-2 (new branch created and switched into it while clonng the master head log)
+    # git checkout (shows the current branch)
+    # git checkout feat-2 (switch to feat-2)
+
+- pushing change of branch to remote
+    # git checkout  or # git branch -a
+        (shows current branch)
+    # git add .
+    # git commit -m "feat 1"
+    # git push origin
+    # git push 
+        (for fist time: # git push --set-upstream origin master)
+
+- pushing change of branch from remote to local
+    - make some change in remote & commit on a branch
+    - come to local and pull that branch
+        # git checkout <branch_name>
+        # git pull
+
+- marging branches to main
+    - merging target branch to master locally
+        # git switch <branch_name>  or  # git checkout <branch_name>
+        # git merge master
+        # git push
+
+- pushing new changes to master branch
