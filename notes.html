@@ -143,7 +143,19 @@
     * EASILY SOLVE MERGE CONFLICT LIVE (github.com)
 
 - fork repo (copy the repo to own account)
-    - got to desired repo (at github.com) > fork > create fork
+    - go to desired repo (at github.com) > fork > create fork
         (code will be added to your account, can view at your repo list)
+    
     - clone in local > make changes > git add . > git commit -m "changed and pushed" > git push
+        # cd .. [Remember to get out of the previously working on repo] 
+        # git clone <copy_ssh_repo> 
+        # cd <copied_repo>
+        # make some change > # git push
+
+- create pull request for forked repo (you made changes and want owner to change that too)
+    - after pushing the change to forked repository
+    - click on contribute > open pull request > create pull request (note: please accept my changes)
+                                                (base: target (pushed into) | compare: source (pushed from))
+    ==> NOW THE OWNER OF THE REPO WILL DO THE MERGE IF NEEDED
+
 
