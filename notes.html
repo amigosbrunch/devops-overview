@@ -107,7 +107,27 @@
     # git push 
         (for fist time: # git push --set-upstream origin master)
 
+- pushing change of branch to remote
+    # git checkout  or # git branch -a
+        (shows current branch)
+    # git add .
+    # git commit -m "feat 1"
+    # git push origin
+    # git push 
+        (for fist time: # git push --set-upstream origin master)
+
+- pushing change of branch from remote to local
+    - make some change in remote & commit on a branch
+    - come to local and pull that branch
+        # git checkout <branch_name>
+        # git pull
+
 - marging branches to main
-    # 
-    
+    - merging target branch to master locally
+        # git switch master  or  # git checkout master
+        # git merge <target_branch_name>
+            (master branch changed
+             git log: to see a new commit for merge is added)
+        # git push
+
 - pushing new changes to master branch
