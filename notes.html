@@ -162,3 +162,19 @@
 - sync fork (to get the updated version of the forked repo)
     - go to the forked repo in your own repolist > sync fork > update branch (if any)
 
+
+- stashing (quick save half the code for now will be back soon from other branch)
+    - make some change > git stash > git stash list
+    (ex:- in branch naster, now it is not staged but added to stash list)
+    - after returning to master branch > git stash pop 
+    (it is at the previous state as it was left earlier)
+            * to drop the stash
+                # git stash list > git stash drop <stash_name>
+            * to clear all stash
+                # git stash clear > git stash list (can check stash list is empty)
+            * to apply the stash (bring the half change back)
+                # git stash pop or git stash list > git stash apply <stash_name>
+
+- rebase command ()
+
+
