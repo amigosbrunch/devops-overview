@@ -119,15 +119,24 @@
 - pushing change of branch from remote to local
     - make some change in remote & commit on a branch
     - come to local and pull that branch
-        # git checkout <branch_name>
+        # git checkout <target_branch_name>
         # git pull
 
-- marging branches to main
-    - merging target branch to master locally
-        # git switch master  or  # git checkout master
-        # git merge <target_branch_name>
-            (master branch changed
-             git log: to see a new commit for merge is added)
-        # git push
+- merging a branch to master locally
+    # git switch master  or  # git checkout master
+    # git merge <target_branch_name>
+        (master branch changed
+            git log: to see a new commit for merge is added)
+    # git push
 
-- pushing new changes to master branch
+- merging a branch to master in live (github.com)
+    - create pull request (a branch developer)
+        - go to repo > pull request > new pull request > base: master <target_branch> compare: feat-3 <source_branch> > create pull request
+                                                       > add some meaningful comment > create pull request
+
+    - approves the pull request for merge (master branch developer)
+        - go to repo > pull request (sees a pull request is created) 
+            - click on the pull request > files changed (to look deeply into it, put review if necessary) 
+            - go to conversation (open) > commit (resolve if any conflict or give a review and do not merge) > merge
+            - can check the merge in code commits
+    
